@@ -1,30 +1,33 @@
 package scisrc.mobiledev.firstuiassignment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var backToMainBtn: Button
+    private lateinit var backToMainBtn: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_login)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+
+        // Use the root layout's ID for applying window insets
+        val rootView = findViewById<androidx.core.widget.NestedScrollView>(R.id.rootScrollView)
+        ViewCompat.setOnApplyWindowInsetsListener(rootView) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
+        // Initialize the Back to Main button
         backToMainBtn = findViewById(R.id.loginBackToMainBtn)
-
-        backToMainBtn.setOnClickListener() {
-            finish()
+        backToMainBtn.setOnClickListener {
+            finish() // Ends this activity and returns to the previous one
         }
     }
 }

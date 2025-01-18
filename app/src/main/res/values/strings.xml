@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">First UI Assignment</string>
+    <string name="logo">Logo</string>
+    <string name="email_address">Email address</string>
+    <string name="or">OR</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="back_to_main">Back to Main</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="i_agree_to_terms">I agree to the Terms &amp; Conditions</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_have_account_login">Already have an account? <u>Login</u></string>
+    <string name="back_to_login">Back to Login</string>
 </resources>
